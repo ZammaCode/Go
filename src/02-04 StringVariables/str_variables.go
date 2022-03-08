@@ -8,4 +8,12 @@ func main() {
 	var hw string = "Hello World"
 
 	fmt.Println(hw)
+
+	//declare msg variable dynamically using :=
+	//operator and make it multiline by using backtick marks
+	msg := `This is 
+			an example of multi-line
+			string.`
+
+	fmt.Println(msg)
 }
