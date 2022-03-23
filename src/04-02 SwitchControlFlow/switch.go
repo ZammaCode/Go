@@ -40,7 +40,7 @@ func main() {
 		fmt.Println("No match found")
 	}
 
-	fmt.Println("-------------------------------------")
+	fmt.Println("--------fallthrough demonstration----------")
 
 	//declare switch condition with initialization statement
 	switch i := 3; {
@@ -60,5 +60,25 @@ func main() {
 		//due to fallthrough this block will
 		//also be executed
 		fmt.Println("i==1 case executed")
+	}
+
+	fmt.Println("--------type switch demonstration----------")
+	//declare variable i with data type as interface
+	var i interface{}
+
+	//assign value to i
+	i = 78
+
+	//in siwtch condition we use the type assertion expression
+	//it assert the type of value or variable
+	//insted of usig specific data type we use type keyword
+	//to be generic for all data types
+	switch i.(type) {
+	case string:
+		fmt.Println("i is of type string")
+	case bool:
+		fmt.Println("i is of type bool")
+	case int:
+		fmt.Println("i is of type int")
 	}
 }
