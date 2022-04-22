@@ -6,19 +6,18 @@ func main() {
 	//declare array n which will hold 10 integer elements
 	var n [10]int
 
-	var i int
-	for i = 0; i < 10; i++ {
-		//set element at index i to value of i
-		n[i] = i
-		//output each array element's value
-		fmt.Printf("n[%d] = %d \n", i, n[i])
-	}
+	//assign value at index 2 of array n
+	n[1] = 10
+	//print value at specific index
+	fmt.Println(n[1])
 
-	fmt.Println("=============================")
-
-	//declare array arr of type string with 5 elements
+	//declare array m of type string with 5 elements
 	//and initialize it with literal values
-	arr := [5]string{"AB", "CD", "EF", "GH", "IJ"}
-	//accessing individual elements of any array
-	fmt.Printf("arr[2] = %s \n", arr[2])
+	m := [5]string{"AB", "CD", "EF", "GH", "IJ"}
+	//print whole array m
+	fmt.Println(m)
+
+	//array initialization can ommit the size of array
+	nums := [...]int{1, 2}
+	fmt.Println(nums)
 }
